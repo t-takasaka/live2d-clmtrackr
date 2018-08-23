@@ -134,6 +134,7 @@ var LIVE2DCUBISMFRAMEWORK;
                 }
             }
             this.parameterTracks.forEach(function (t) {
+                if(t.targetId == "PARAM_ANGLE_X"){ continue; }
                 var p = target.parameters.ids.indexOf(t.targetId);
                 if (p >= 0) {
                     var sample = t.evaluate(time);
